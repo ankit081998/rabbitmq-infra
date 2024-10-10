@@ -13,8 +13,8 @@ type MessageBus struct {
 	UserName   string
 	Password   string
 	Port       string
-	queues     map[string]*Queue
-	exchanges  map[string]*Exchange
+	Queues     map[string]*Queue
+	Exchanges  map[string]*Exchange
 }
 
 func NewMessageBus(username, password, port, brokerIP string) *MessageBus {
@@ -50,3 +50,7 @@ func (mb *MessageBus) ConnectToMessageBus() error {
 	}
 	return nil
 }
+
+
+
+
